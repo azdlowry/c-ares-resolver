@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `BlockingResolver` struct in crate `c_ares_resolver`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, BlockingResolver">
+
+    <title>c_ares_resolver::BlockingResolver - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct BlockingResolver</p><div class="block items"><ul><li><a href="#methods">Methods</a></li></ul></div><p class='location'><a href='index.html'>c_ares_resolver</a></p><script>window.sidebarCurrent = {name: 'BlockingResolver', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>c_ares_resolver</a>::<wbr><a class="struct" href=''>BlockingResolver</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#19-21' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct BlockingResolver { /* fields omitted */ }</pre><div class='docblock'><p>A blocking DNS resolver.</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../c_ares_resolver/struct.BlockingResolver.html" title="struct c_ares_resolver::BlockingResolver">BlockingResolver</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#23-344' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class="method"><span id='new.v' class='invisible'><code>fn <a href='#method.new' class='fnname'>new</a>() -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../c_ares_resolver/struct.BlockingResolver.html" title="struct c_ares_resolver::BlockingResolver">BlockingResolver</a>, <a class="enum" href="../c_ares_resolver/enum.Error.html" title="enum c_ares_resolver::Error">Error</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#25-28' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Create a new <code>BlockingResolver</code>, using default <code>Options</code>.</p>
+</div><h4 id='method.with_options' class="method"><span id='with_options.v' class='invisible'><code>fn <a href='#method.with_options' class='fnname'>with_options</a>(options: <a class="struct" href="../c_ares_resolver/struct.Options.html" title="struct c_ares_resolver::Options">Options</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../c_ares_resolver/struct.BlockingResolver.html" title="struct c_ares_resolver::BlockingResolver">BlockingResolver</a>, <a class="enum" href="../c_ares_resolver/enum.Error.html" title="enum c_ares_resolver::Error">Error</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#31-37' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Create a new <code>BlockingResolver</code>, with the given <code>Options</code>.</p>
+</div><h4 id='method.set_servers' class="method"><span id='set_servers.v' class='invisible'><code>fn <a href='#method.set_servers' class='fnname'>set_servers</a>(&amp;mut self, servers: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">&amp;[</a>&amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>Self, <a class="enum" href="../c_ares/error/enum.Error.html" title="enum c_ares::error::Error">Error</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#44-49' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the list of servers to contact, instead of the servers specified
+in resolv.conf or the local named.</p>
+
+<p>String format is <code>host[:port]</code>.  IPv6 addresses with ports require
+square brackets eg <code>[2001:4860:4860::8888]:53</code>.</p>
+</div><h4 id='method.set_local_ipv4' class="method"><span id='set_local_ipv4.v' class='invisible'><code>fn <a href='#method.set_local_ipv4' class='fnname'>set_local_ipv4</a>(&amp;mut self, ipv4: &amp;<a class="struct" href="https://doc.rust-lang.org/nightly/std/net/ip/struct.Ipv4Addr.html" title="struct std::net::ip::Ipv4Addr">Ipv4Addr</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#52-55' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the local IPv4 address from which to make queries.</p>
+</div><h4 id='method.set_local_ipv6' class="method"><span id='set_local_ipv6.v' class='invisible'><code>fn <a href='#method.set_local_ipv6' class='fnname'>set_local_ipv6</a>(&amp;mut self, ipv6: &amp;<a class="struct" href="https://doc.rust-lang.org/nightly/std/net/ip/struct.Ipv6Addr.html" title="struct std::net::ip::Ipv6Addr">Ipv6Addr</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#58-61' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the local IPv6 address from which to make queries.</p>
+</div><h4 id='method.set_local_device' class="method"><span id='set_local_device.v' class='invisible'><code>fn <a href='#method.set_local_device' class='fnname'>set_local_device</a>(&amp;mut self, device: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;mut </a>Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#64-67' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Set the local device from which to make queries.</p>
+</div><h4 id='method.query_a' class="method"><span id='query_a.v' class='invisible'><code>fn <a href='#method.query_a' class='fnname'>query_a</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/a/struct.AResults.html" title="struct c_ares::a::AResults">AResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#70-76' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Look up the A records associated with <code>name</code>.</p>
+</div><h4 id='method.search_a' class="method"><span id='search_a.v' class='invisible'><code>fn <a href='#method.search_a' class='fnname'>search_a</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/a/struct.AResults.html" title="struct c_ares::a::AResults">AResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#79-85' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Search for the A records associated with <code>name</code>.</p>
+</div><h4 id='method.query_aaaa' class="method"><span id='query_aaaa.v' class='invisible'><code>fn <a href='#method.query_aaaa' class='fnname'>query_aaaa</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/aaaa/struct.AAAAResults.html" title="struct c_ares::aaaa::AAAAResults">AAAAResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#88-94' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Look up the AAAA records associated with <code>name</code>.</p>
+</div><h4 id='method.search_aaaa' class="method"><span id='search_aaaa.v' class='invisible'><code>fn <a href='#method.search_aaaa' class='fnname'>search_aaaa</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/aaaa/struct.AAAAResults.html" title="struct c_ares::aaaa::AAAAResults">AAAAResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#97-103' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Search for the AAAA records associated with <code>name</code>.</p>
+</div><h4 id='method.query_cname' class="method"><span id='query_cname.v' class='invisible'><code>fn <a href='#method.query_cname' class='fnname'>query_cname</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/cname/struct.CNameResults.html" title="struct c_ares::cname::CNameResults">CNameResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#106-113' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Look up the CNAME records associated with <code>name</code>.</p>
+</div><h4 id='method.search_cname' class="method"><span id='search_cname.v' class='invisible'><code>fn <a href='#method.search_cname' class='fnname'>search_cname</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/cname/struct.CNameResults.html" title="struct c_ares::cname::CNameResults">CNameResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#116-123' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Search for the CNAME records associated with <code>name</code>.</p>
+</div><h4 id='method.query_mx' class="method"><span id='query_mx.v' class='invisible'><code>fn <a href='#method.query_mx' class='fnname'>query_mx</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/mx/struct.MXResults.html" title="struct c_ares::mx::MXResults">MXResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#126-132' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Look up the MX records associated with <code>name</code>.</p>
+</div><h4 id='method.search_mx' class="method"><span id='search_mx.v' class='invisible'><code>fn <a href='#method.search_mx' class='fnname'>search_mx</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/mx/struct.MXResults.html" title="struct c_ares::mx::MXResults">MXResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#135-141' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Search for the MX records associated with <code>name</code>.</p>
+</div><h4 id='method.query_naptr' class="method"><span id='query_naptr.v' class='invisible'><code>fn <a href='#method.query_naptr' class='fnname'>query_naptr</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/naptr/struct.NAPTRResults.html" title="struct c_ares::naptr::NAPTRResults">NAPTRResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#144-151' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Look up the NAPTR records associated with <code>name</code>.</p>
+</div><h4 id='method.search_naptr' class="method"><span id='search_naptr.v' class='invisible'><code>fn <a href='#method.search_naptr' class='fnname'>search_naptr</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/naptr/struct.NAPTRResults.html" title="struct c_ares::naptr::NAPTRResults">NAPTRResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#154-161' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Search for the NAPTR records associated with <code>name</code>.</p>
+</div><h4 id='method.query_ns' class="method"><span id='query_ns.v' class='invisible'><code>fn <a href='#method.query_ns' class='fnname'>query_ns</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/ns/struct.NSResults.html" title="struct c_ares::ns::NSResults">NSResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#164-170' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Look up the NS records associated with <code>name</code>.</p>
+</div><h4 id='method.search_ns' class="method"><span id='search_ns.v' class='invisible'><code>fn <a href='#method.search_ns' class='fnname'>search_ns</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/ns/struct.NSResults.html" title="struct c_ares::ns::NSResults">NSResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#173-179' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Search for the NS records associated with <code>name</code>.</p>
+</div><h4 id='method.query_ptr' class="method"><span id='query_ptr.v' class='invisible'><code>fn <a href='#method.query_ptr' class='fnname'>query_ptr</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/ptr/struct.PTRResults.html" title="struct c_ares::ptr::PTRResults">PTRResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#182-188' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Look up the PTR records associated with <code>name</code>.</p>
+</div><h4 id='method.search_ptr' class="method"><span id='search_ptr.v' class='invisible'><code>fn <a href='#method.search_ptr' class='fnname'>search_ptr</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/ptr/struct.PTRResults.html" title="struct c_ares::ptr::PTRResults">PTRResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#191-197' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Search for the PTR records associated with <code>name</code>.</p>
+</div><h4 id='method.query_soa' class="method"><span id='query_soa.v' class='invisible'><code>fn <a href='#method.query_soa' class='fnname'>query_soa</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/soa/struct.SOAResult.html" title="struct c_ares::soa::SOAResult">SOAResult</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#200-206' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Look up the SOA records associated with <code>name</code>.</p>
+</div><h4 id='method.search_soa' class="method"><span id='search_soa.v' class='invisible'><code>fn <a href='#method.search_soa' class='fnname'>search_soa</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/soa/struct.SOAResult.html" title="struct c_ares::soa::SOAResult">SOAResult</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#209-215' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Search for the SOA records associated with <code>name</code>.</p>
+</div><h4 id='method.query_srv' class="method"><span id='query_srv.v' class='invisible'><code>fn <a href='#method.query_srv' class='fnname'>query_srv</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/srv/struct.SRVResults.html" title="struct c_ares::srv::SRVResults">SRVResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#218-224' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Look up the SRV records associated with <code>name</code>.</p>
+</div><h4 id='method.search_srv' class="method"><span id='search_srv.v' class='invisible'><code>fn <a href='#method.search_srv' class='fnname'>search_srv</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/srv/struct.SRVResults.html" title="struct c_ares::srv::SRVResults">SRVResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#227-233' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Search for the SRV records associated with <code>name</code>.</p>
+</div><h4 id='method.query_txt' class="method"><span id='query_txt.v' class='invisible'><code>fn <a href='#method.query_txt' class='fnname'>query_txt</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/txt/struct.TXTResults.html" title="struct c_ares::txt::TXTResults">TXTResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#236-242' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Look up the TXT records associated with <code>name</code>.</p>
+</div><h4 id='method.search_txt' class="method"><span id='search_txt.v' class='invisible'><code>fn <a href='#method.search_txt' class='fnname'>search_txt</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares/txt/struct.TXTResults.html" title="struct c_ares::txt::TXTResults">TXTResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#245-251' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Search for the TXT records associated with <code>name</code>.</p>
+</div><h4 id='method.get_host_by_address' class="method"><span id='get_host_by_address.v' class='invisible'><code>fn <a href='#method.get_host_by_address' class='fnname'>get_host_by_address</a>(&amp;self, address: &amp;<a class="enum" href="https://doc.rust-lang.org/nightly/std/net/ip/enum.IpAddr.html" title="enum std::net::ip::IpAddr">IpAddr</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares_resolver/struct.HostResults.html" title="struct c_ares_resolver::HostResults">HostResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#259-266' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a host query by address.</p>
+
+<p>This method is one of the very few places where this library performs
+strictly more allocation than the underlying <code>c-ares</code> code.  If this is
+a problem for you, you should prefer to use the analogous method on the
+<code>Resolver</code>.</p>
+</div><h4 id='method.get_host_by_name' class="method"><span id='get_host_by_name.v' class='invisible'><code>fn <a href='#method.get_host_by_name' class='fnname'>get_host_by_name</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;family: <a class="enum" href="../c_ares/types/enum.AddressFamily.html" title="enum c_ares::types::AddressFamily">AddressFamily</a><br>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares_resolver/struct.HostResults.html" title="struct c_ares_resolver::HostResults">HostResults</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#274-281' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a host query by name.</p>
+
+<p>This method is one of the very few places where this library performs
+strictly more allocation than the underlying <code>c-ares</code> code.  If this is
+a problem for you, you should prefer to use the analogous method on the
+<code>Resolver</code>.</p>
+</div><h4 id='method.get_name_info' class="method"><span id='get_name_info.v' class='invisible'><code>fn <a href='#method.get_name_info' class='fnname'>get_name_info</a>&lt;F&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;address: &amp;<a class="enum" href="https://doc.rust-lang.org/nightly/std/net/addr/enum.SocketAddr.html" title="enum std::net::addr::SocketAddr">SocketAddr</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;flags: <a class="struct" href="../c_ares/ni_flags/struct.NIFlags.html" title="struct c_ares::ni_flags::NIFlags">NIFlags</a><br>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="../c_ares_resolver/struct.NameInfoResult.html" title="struct c_ares_resolver::NameInfoResult">NameInfoResult</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#289-299' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Address-to-nodename translation in protocol-independent manner.</p>
+
+<p>This method is one of the very few places where this library performs
+strictly more allocation than the underlying <code>c-ares</code> code.  If this is
+a problem for you, you should prefer to use the analogous method on the
+<code>Resolver</code>.</p>
+</div><h4 id='method.query' class="method"><span id='query.v' class='invisible'><code>fn <a href='#method.query' class='fnname'>query</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, dns_class: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u16.html">u16</a>, query_type: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u16.html">u16</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#314-321' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Initiate a single-question DNS query for <code>name</code>.  The class and type of
+the query are per the provided parameters, taking values as defined in
+<code>arpa/nameser.h</code>.</p>
+
+<p>This method is one of the very few places where this library performs
+strictly more allocation than the underlying <code>c-ares</code> code.  If this is
+a problem for you, you should prefer to use the analogous method on the
+<code>Resolver</code>.</p>
+
+<p>This method is provided so that users can query DNS types for which
+<code>c-ares</code> does not provide a parser; or in case a third-party parser is
+preferred.  Usually, if a suitable <code>query_xxx()</code> is available, that
+should be used.</p>
+</div><h4 id='method.search' class="method"><span id='search.v' class='invisible'><code>fn <a href='#method.search' class='fnname'>search</a>(&amp;self, name: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, dns_class: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u16.html">u16</a>, query_type: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u16.html">u16</a>) -&gt; <a class="type" href="../c_ares/error/type.Result.html" title="type c_ares::error::Result">Result</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/c_ares_resolver/blockingresolver.rs.html#336-343' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Initiate a series of single-question DNS queries for <code>name</code>.  The
+class and type of the query are per the provided parameters, taking
+values as defined in <code>arpa/nameser.h</code>.</p>
+
+<p>This method is one of the very few places where this library performs
+strictly more allocation than the underlying <code>c-ares</code> code.  If this is
+a problem for you, you should prefer to use the analogous method on the
+<code>Resolver</code>.</p>
+
+<p>This method is provided so that users can search DNS types for which
+<code>c-ares</code> does not provide a parser; or in case a third-party parser is
+preferred.  Usually, if a suitable <code>search_xxx()</code> is available, that
+should be used.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "c_ares_resolver";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
