@@ -13,7 +13,7 @@ keywords = ["DNS", "c-ares", "futures"]
 categories = ["asynchronous", "network-programming"]
 
 [dependencies]
-c-ares = { git="https://github.com/azdlowry/rust-c-ares"}
+c-ares = { git="https://github.com/dimbleby/rust-c-ares"}
 futures = "0.1"
 mio-more = "0.1"
 
